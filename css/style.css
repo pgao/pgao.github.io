@@ -1,0 +1,21 @@
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #dddddd;
+  background: #111111; }
+
+a {
+  color: #dddddd; }
+
+.title-container {
+  padding: 290px; }
+
+.title {
+  font-size: 100px;
+  width: 330px;
+  margin: 0 auto;
+  padding-bottom: 10px; }
+
+.nav-bar {
+  font-size: 50px;
+  width: 460px;
+  margin: 0 auto; }

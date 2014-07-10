@@ -1,0 +1,30 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #DDD;
+$background-color: #111;
+
+body {
+    font: 100% $font-stack;
+    color: $primary-color;
+    background: $background-color;
+}
+
+a {
+    color: $primary-color;
+}
+
+.title-container {
+    padding: 290px;
+}
+
+.title {
+    font-size: 100px;
+    width: 330px;
+    margin: 0 auto;
+    padding-bottom: 10px;
+}
+
+.nav-bar {
+    font-size: 50px;
+    width: 460px;
+    margin: 0 auto;
+}
