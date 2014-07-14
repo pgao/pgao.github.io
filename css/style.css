@@ -1,21 +1,23 @@
+@import url(http://fonts.googleapis.com/css?family=Bitter:700|Lato);
 body {
-  font: 100% Helvetica, sans-serif;
-  color: #dddddd;
+  color: #eeeeee;
   background: #111111; }
 
 a {
-  color: #dddddd; }
+  color: #eeeeee; }
+  a:hover {
+    color: orange; }
 
 .title-container {
-  padding: 290px; }
+  padding: 200px; }
 
 .title {
-  font-size: 100px;
-  width: 330px;
-  margin: 0 auto;
-  padding-bottom: 10px; }
+  font-family: Bitter, serif;
+  font-size: 150px;
+  text-align: center;
+  padding-bottom: 20px; }
 
 .nav-bar {
+  font-family: Lato, sans-serif;
   font-size: 50px;
-  width: 460px;
-  margin: 0 auto; }
+  text-align: center; }
