@@ -1,23 +1,66 @@
 @import url(http://fonts.googleapis.com/css?family=Bitter:700|Lato);
 body {
   color: #eeeeee;
-  background: #111111; }
+  background: #111111;
+  height: 100%;
+  margin: 0px;
+  position: fixed;
+  width: 100%; }
 
 a {
   color: #eeeeee; }
   a:hover {
     color: orange; }
 
-.title-container {
-  padding: 200px; }
+.home, .write, .make, .am {
+  background: #111111;
+  height: 100%;
+  position: fixed;
+  width: 100%; }
 
 .title {
   font-family: Bitter, serif;
   font-size: 150px;
   text-align: center;
+  margin-top: 15%;
   padding-bottom: 20px; }
 
 .nav-bar {
   font-family: Lato, sans-serif;
   font-size: 50px;
   text-align: center; }
+
+.write {
+  background: blue; }
+
+.make {
+  background: #DDD; }
+
+.am {
+  background: white; }
+
+.slide {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; }
+
+.slide.ng-enter,
+.slide.ng-leave {
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease; }
+
+.slide.ng-enter {
+  left: 100%; }
+
+.slide.ng-enter-active {
+  left: 0; }
+
+.slide.ng-leave {
+  left: 0; }
+
+.slide.ng-leave-active {
+  left: -100%; }

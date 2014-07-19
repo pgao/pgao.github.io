@@ -1,4 +1,4 @@
-var homepageApp = angular.module('homepageApp', ['ngRoute']);
+var homepageApp = angular.module('homepageApp', ['ngRoute', 'ngAnimate']);
 
 homepageApp.config(function($routeProvider) {
     $routeProvider

@@ -6,6 +6,7 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular-route.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular-animate.js"></script>
 
         <link href="css/style.css" rel="stylesheet">
         <script src="js/controllers.js"></script>
@@ -24,13 +25,6 @@
     </head>
 
     <body ng-controller="mainController">
-        <div id="main"></div>
-        <div ng-view></div>
-        <div class="title-container">
-            <div class="title">gaoism</div>
-            <div class="nav-bar">
-                I <a href="#write">write</a>, I <a href="#make">make</a>, I <a href="#am">am</a>.
-            </div>
-        </div>
+        <div ng-view class="slide"></div>
     </body>
 </html>
