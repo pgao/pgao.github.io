@@ -1,3 +1,4 @@
+@import 'bourbon/bourbon';
 @import url(http://fonts.googleapis.com/css?family=Bitter:700|Lato);
 
 $title-font: Bitter, serif;
@@ -6,12 +7,7 @@ $primary-color: #EEE;
 $background-color: #111;
 
 body {
-    color: $primary-color;
     background: $background-color;
-    height: 100%;
-    margin: 0px;
-    position: fixed;
-    width: 100%;
 }
 
 a {
@@ -22,24 +18,24 @@ a {
 }
 
 .home {
+    top: 0;
+    bottom: 0;
+    color: $primary-color;
     background: $background-color;
-    height: 100%;
-    position: fixed;
+    position: absolute;
     width: 100%;
-}
-
-.title {
-    font-family: $title-font;
-    font-size: 150px;
-    text-align: center;
-    margin-top: 15%;
-    padding-bottom: 20px;
-}
-
-.nav-bar {
-    font-family: $description-font;
-    font-size: 50px;
-    text-align: center;
+    .title {
+        font-family: $title-font;
+        font-size: 150px;
+        text-align: center;
+        margin-top: 15%;
+        padding-bottom: 20px;
+    }
+    .nav-bar {
+        font-family: $description-font;
+        font-size: 50px;
+        text-align: center;
+    }
 }
 
 .write {
@@ -58,30 +54,40 @@ a {
 }
 
 // transition css
-
-.slide {
+.page {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
 }
-.slide.ng-enter,
-.slide.ng-leave {
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    transition: all 1s ease;
+
+.ng-enter {
+    @include animation(slideInRight 0.5s both ease-in);
+    z-index: 8888;
 }
-.slide.ng-enter {
-    left: 100%;
+
+.ng-leave {
+    @include animation(slideOutLeft 0.5s both ease-in);
+    z-index: 9999;
 }
-.slide.ng-enter-active {
-    left: 0;
+
+/* ANIMATIONS
+============================================================================= */
+
+/* slide in from the bottom */
+@include keyframes(slideOutLeft) {
+    to      { @include transform(translateX(-100%)); }
 }
-.slide.ng-leave {
-    left: 0;
+
+/* slide in from the right */
+@include keyframes(slideInRight) {
+    from    { @include transform(translateX(100%)); }
+    to      { @include transform(translateX(0%)); }
 }
-.slide.ng-leave-active {
-    left: -100%;
+
+/* slide in from the bottom */
+@include keyframes(slideInUp) {
+    from    { @include transform(translateY(100%)); }
+    to      { @include transform(translateY(0%)); }
 }

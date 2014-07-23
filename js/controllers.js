@@ -24,17 +24,17 @@ homepageApp.config(function($routeProvider) {
 });
 
 homepageApp.controller('mainController', function($scope) {
-    $scope.message = 'blah';
+    $scope.pageClass = 'page-home'; 
 });
 
 homepageApp.controller('writeController', function($scope) {
-    $scope.message = 'blah';
+    $scope.pageClass = 'page-write'; 
 });
 
 homepageApp.controller('makeController', function($scope) {
-    $scope.message = 'blah';
+    $scope.pageClass = 'page-make'; 
 });
 
 homepageApp.controller('amController', function($scope) {
-    $scope.message = 'blah';
+    $scope.pageClass = 'page-am'; 
 });
