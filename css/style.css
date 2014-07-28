@@ -1,29 +1,71 @@
 @import url(http://fonts.googleapis.com/css?family=Bitter:700|Lato);
 body {
-  background: #111111; }
+  background: #111111;
+  margin: 0; }
 
 a {
   color: #eeeeee; }
   a:hover {
-    color: orange; }
+    color: grey; }
 
-.home, .write, .make, .am {
+.page {
+  color: #eeeeee;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%; }
+
+.page-title {
+  font-family: Lato, sans-serif;
+  font-size: 70px;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  position: relative;
+  text-align: center; }
+  .page-title .title-emphasis {
+    font-family: Bitter, serif;
+    text-decoration: underline; }
+
+.home {
   top: 0;
   bottom: 0;
   color: #eeeeee;
-  background: #111111;
   position: absolute;
   width: 100%; }
-  .home .title, .write .title, .make .title, .am .title {
-    font-family: Bitter, serif;
-    font-size: 150px;
-    text-align: center;
-    margin-top: 15%;
-    padding-bottom: 20px; }
-  .home .nav-bar, .write .nav-bar, .make .nav-bar, .am .nav-bar {
+  .home .background-image {
+    background-image: url("/img/brain.jpg");
+    background-attachment: fixed;
+    background-position: 20% 20%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100%;
+    opacity: 0.85;
+    position: absolute;
+    width: 100%;
+    z-index: -1; }
+  .home .gaoism {
+    padding-bottom: 20px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 15em; }
+    .home .gaoism img {
+      display: block;
+      height: 300px;
+      margin: 0 auto; }
+  .home .description {
     font-family: Lato, sans-serif;
     font-size: 50px;
-    text-align: center; }
+    font-weight: bold;
+    position: absolute;
+    left: 13em;
+    top: 9em; }
+
+.subpage, .write, .make, .am {
+  height: 100%;
+  overflow: auto;
+  width: 100%; }
 
 .write {
   background: blue; }
@@ -32,26 +74,21 @@ a {
   background: #DDD; }
 
 .am {
-  background: white; }
-
-.page {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%; }
-
-.ng-enter {
-  -webkit-animation: slideInRight 0.5s both ease-in;
-  -moz-animation: slideInRight 0.5s both ease-in;
-  animation: slideInRight 0.5s both ease-in;
-  z-index: 8888; }
-
-.ng-leave {
-  -webkit-animation: slideOutLeft 0.5s both ease-in;
-  -moz-animation: slideOutLeft 0.5s both ease-in;
-  animation: slideOutLeft 0.5s both ease-in;
-  z-index: 9999; }
+  background: #2c3e50; }
+  .am .me-photo-container {
+    margin: 0 auto;
+    width: 14%; }
+    .am .me-photo-container .me-photo, .am .me-photo-container .me-photo-alt {
+      display: inline-block; }
+      .am .me-photo-container .me-photo img, .am .me-photo-container .me-photo-alt img {
+        display: block;
+        max-height: 70%; }
+    .am .me-photo-container .me-photo-alt {
+      display: none; }
+    .am .me-photo-container:hover .me-photo, .am .me-photo-container:hover .me-photo-alt {
+      display: none; }
+    .am .me-photo-container:hover .me-photo-alt {
+      display: inline-block; }
 
 /* ANIMATIONS
 ============================================================================= */
