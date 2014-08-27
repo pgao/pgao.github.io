@@ -1,4 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Bitter:700|Lato);
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 body {
   background: #111111;
   margin: 0; }
@@ -8,12 +13,14 @@ a {
   a:hover {
     color: grey; }
 
+.nav-bar {
+  height: 100px;
+  width: 100px;
+  z-index: 10; }
+
 .page {
   color: #eeeeee;
   height: 100%;
-  left: 0;
-  position: fixed;
-  top: 0;
   width: 100%; }
 
 .page-title {
@@ -24,8 +31,7 @@ a {
   position: relative;
   text-align: center; }
   .page-title .title-emphasis {
-    font-family: Bitter, serif;
-    text-decoration: underline; }
+    font-family: Bitter, serif; }
 
 .home {
   top: 0;
@@ -36,31 +42,33 @@ a {
   .home .background-image {
     background-image: url("/img/brain.jpg");
     background-attachment: fixed;
-    background-position: 20% 20%;
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: 100%;
     height: 100%;
     opacity: 0.85;
-    position: absolute;
     width: 100%;
     z-index: -1; }
-  .home .gaoism {
-    padding-bottom: 20px;
-    position: absolute;
+  .home .home-content-container {
+    height: 500px;
     left: 0;
+    margin: 0 auto;
+    position: fixed;
     right: 0;
-    top: 15em; }
-    .home .gaoism img {
-      display: block;
-      height: 300px;
-      margin: 0 auto; }
-  .home .description {
-    font-family: Lato, sans-serif;
-    font-size: 50px;
-    font-weight: bold;
-    position: absolute;
-    left: 13em;
-    top: 9em; }
+    top: 30%;
+    width: 647px; }
+    .home .home-content-container .gaoism {
+      position: absolute; }
+      .home .home-content-container .gaoism img {
+        display: block;
+        height: 250px; }
+    .home .home-content-container .description {
+      font-family: Lato, sans-serif;
+      font-size: 50px;
+      font-weight: bold;
+      left: 25%;
+      position: absolute;
+      top: 35%; }
 
 .subpage, .write, .make, .am {
   height: 100%;
@@ -76,19 +84,24 @@ a {
 .am {
   background: #2c3e50; }
   .am .me-photo-container {
-    margin: 0 auto;
-    width: 14%; }
+    display: inline-block;
+    float: left;
+    margin-left: 13%; }
     .am .me-photo-container .me-photo, .am .me-photo-container .me-photo-alt {
       display: inline-block; }
-      .am .me-photo-container .me-photo img, .am .me-photo-container .me-photo-alt img {
-        display: block;
-        max-height: 70%; }
     .am .me-photo-container .me-photo-alt {
       display: none; }
     .am .me-photo-container:hover .me-photo, .am .me-photo-container:hover .me-photo-alt {
       display: none; }
     .am .me-photo-container:hover .me-photo-alt {
       display: inline-block; }
+  .am .bio {
+    display: inline-block;
+    float: left;
+    margin-left: 5%;
+    width: 40%; }
+    .am .bio p {
+      font-size: 25px; }
 
 /* ANIMATIONS
 ============================================================================= */

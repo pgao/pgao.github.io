@@ -2,7 +2,7 @@
 <html lang="en" ng-app="homepageApp">
     <head>
         <meta http-equiv="Content-type" content="small-module-text/html" charset="utf-8">
-        <title>gaoism</title>
+        <title>{{ title }}</title>
 
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular-route.js"></script>
@@ -25,6 +25,13 @@
     </head>
 
     <body>
-        <div ng-view class="page"></div>
+      <div class="nav-bar" ng-controller="HeaderController">
+        asdf
+        <ul class="">
+          <li ng-class="{ active: isActive('#')}"><a href="/">Home</a></li>
+          <li ng-class="{ active: isActive('#write')}"><a href="#write">Write</a></li>
+        </ul>
+      </div>
+      <div ng-view class="page"></div>
     </body>
 </html>
