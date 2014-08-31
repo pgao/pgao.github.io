@@ -25,11 +25,12 @@
     </head>
 
     <body>
-      <div class="nav-bar" ng-controller="HeaderController">
-        asdf
-        <ul class="">
-          <li ng-class="{ active: isActive('#')}"><a href="/">Home</a></li>
-          <li ng-class="{ active: isActive('#write')}"><a href="#write">Write</a></li>
+      <div class="nav-bar" ng-show="showNavBar" ng-controller="NavbarController">
+        <ul>
+          <li ng-class="{ active: isActive('/')}"><a href="/">Home</a></li>
+          <li ng-class="{ active: isActive('/write')}"><a href="#write">Write</a></li>
+          <li ng-class="{ active: isActive('/make')}"><a href="#make">Make</a></li>
+          <li ng-class="{ active: isActive('/am')}"><a href="#am">Am</a></li>
         </ul>
       </div>
       <div ng-view class="page"></div>

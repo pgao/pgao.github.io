@@ -5,32 +5,37 @@ homepageApp.config(function ($routeProvider) {
         .when('/', {
             templateUrl: 'html/home.html',
             controller: 'HomeController',
-            title: 'GAOISM'
+            pageTitle: 'GAOISM',
+            showNavBar: false
         })
 
         .when('/write', {
             templateUrl: 'html/write.html',
             controller: 'WriteController',
-            title: "I write. | GAOISM"
+            pageTitle: "I write. | GAOISM",
+            showNavBar: true
         })
 
         .when('/make', {
             templateUrl: 'html/make.html',
             controller: 'MakeController',
-            title: "I make. | GAOISM"
+            pageTitle: "I make. | GAOISM",
+            showNavBar: true
         })
 
         .when('/am', {
             templateUrl: 'html/am.html',
             controller: 'AmController',
-            title: "I am. | GAOISM"
+            pageTitle: "I am. | GAOISM",
+            showNavBar: true
         });
 
 });
 
-homepageApp.controller('HeaderController', function ($scope, $location) {
+homepageApp.controller('NavbarController', function ($scope, $location) {
     $scope.isActive = function (viewLocation) {
-        console.log($location.path());
+        console.log("viewLocation", viewLocation);
+        console.log("path", $location.path());
         return viewLocation === $location.path();
     };
 });
@@ -53,6 +58,7 @@ homepageApp.controller('AmController', function ($scope) {
 
 homepageApp.run(['$rootScope', '$location', function ($rootScope, $location) {
     $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
-        $rootScope.title = current.$$route.title;
+        $rootScope.pageTitle = current.$$route.pageTitle;
+        $rootScope.showNavBar = current.$$route.showNavBar;
     });
 }]);

@@ -14,9 +14,21 @@ a {
     color: grey; }
 
 .nav-bar {
-  height: 100px;
-  width: 100px;
-  z-index: 10; }
+  font: 30px/1.5 Lato, sans-serif;
+  height: 5%;
+  width: 100%;
+  z-index: 1; }
+  .nav-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+    .nav-bar ul li {
+      display: inline;
+      float: left;
+      margin-left: 20px;
+      width: 100px; }
+    .nav-bar ul .active a {
+      color: orange; }
 
 .page {
   color: #eeeeee;
@@ -38,7 +50,8 @@ a {
   bottom: 0;
   color: #eeeeee;
   position: absolute;
-  width: 100%; }
+  width: 100%;
+  z-index: -1; }
   .home .background-image {
     background-image: url("/img/brain.jpg");
     background-attachment: fixed;
@@ -47,10 +60,9 @@ a {
     background-size: 100%;
     height: 100%;
     opacity: 0.85;
-    width: 100%;
-    z-index: -1; }
+    width: 100%; }
   .home .home-content-container {
-    height: 500px;
+    height: 250px;
     left: 0;
     margin: 0 auto;
     position: fixed;
@@ -68,25 +80,28 @@ a {
       font-weight: bold;
       left: 25%;
       position: absolute;
-      top: 35%; }
+      top: 70%; }
 
 .subpage, .write, .make, .am {
   height: 100%;
   overflow: auto;
+  padding-bottom: 50px;
   width: 100%; }
 
 .write {
-  background: blue; }
+  background: #2c3e50; }
 
 .make {
-  background: #DDD; }
+  background: #2c3e50; }
 
 .am {
   background: #2c3e50; }
   .am .me-photo-container {
     display: inline-block;
     float: left;
-    margin-left: 13%; }
+    height: 704px;
+    margin-left: 13%;
+    width: 467px; }
     .am .me-photo-container .me-photo, .am .me-photo-container .me-photo-alt {
       display: inline-block; }
     .am .me-photo-container .me-photo-alt {
@@ -96,12 +111,19 @@ a {
     .am .me-photo-container:hover .me-photo-alt {
       display: inline-block; }
   .am .bio {
+    color: black;
+    background-color: white;
     display: inline-block;
+    font-style: Lato, sans-serif;
     float: left;
+    height: 704px;
     margin-left: 5%;
-    width: 40%; }
+    padding: 20px;
+    width: 467px; }
     .am .bio p {
-      font-size: 25px; }
+      font-size: 20px; }
+    .am .bio a {
+      color: black; }
 
 /* ANIMATIONS
 ============================================================================= */
