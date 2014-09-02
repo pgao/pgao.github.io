@@ -4,38 +4,47 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-body {
-  background: #111111;
-  margin: 0; }
-
 a {
-  color: #eeeeee; }
+  text-decoration: none; }
   a:hover {
     color: grey; }
 
-.nav-bar {
-  font: 30px/1.5 Lato, sans-serif;
-  height: 5%;
-  width: 100%;
-  z-index: 1; }
-  .nav-bar ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0; }
-    .nav-bar ul li {
-      display: inline;
-      float: left;
-      margin-left: 20px;
-      width: 100px; }
-    .nav-bar ul .active a {
-      color: orange; }
-
-.page {
-  color: #eeeeee;
+body {
+  background: #111111;
   height: 100%;
+  margin: 0;
+  position: absolute;
   width: 100%; }
 
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+
+.nav-bar {
+  background-color: black;
+  font: 30px/1.5 Lato, sans-serif;
+  height: 150px;
+  width: 100%;
+  z-index: 1; }
+  .nav-bar ul li {
+    display: inline;
+    float: left;
+    margin-left: 20px;
+    margin-top: 35px;
+    width: 100px; }
+    .nav-bar ul li a {
+      color: grey; }
+      .nav-bar ul li a:hover {
+        color: orange; }
+  .nav-bar ul .gaoism-logo {
+    margin-top: 10px;
+    width: 280px; }
+  .nav-bar ul .active a {
+    color: orange; }
+
 .page-title {
+  color: #eeeeee;
   font-family: Lato, sans-serif;
   font-size: 70px;
   margin-top: 0.5em;
@@ -51,7 +60,12 @@ a {
   color: #eeeeee;
   position: absolute;
   width: 100%;
-  z-index: -1; }
+  z-index: 1; }
+  .home a {
+    color: #eeeeee;
+    text-decoration: underline; }
+    .home a:hover {
+      color: grey; }
   .home .background-image {
     background-image: url("/img/brain.jpg");
     background-attachment: fixed;
@@ -84,12 +98,46 @@ a {
 
 .subpage, .write, .make, .am {
   height: 100%;
-  overflow: auto;
-  padding-bottom: 50px;
+  position: relative;
   width: 100%; }
 
 .write {
   background: #2c3e50; }
+  .write a,
+  .write a:visited {
+    color: grey; }
+    .write a:hover,
+    .write a:visited:hover {
+      color: orange; }
+  .write .page-title {
+    height: 375px;
+    line-height: 375px; }
+  .write .project-container {
+    text-align: center;
+    width: 100%; }
+    .write .project-container .write-project {
+      color: white;
+      display: block;
+      height: 375px;
+      margin: auto auto;
+      position: relative;
+      width: 100%; }
+      .write .project-container .write-project .project-overlay {
+        background-color: black;
+        display: none;
+        font-size: 50px;
+        height: 100%;
+        line-height: 375px;
+        opacity: 0.85;
+        position: absolute;
+        width: 100%; }
+      .write .project-container .write-project .project-picture {
+        display: block;
+        height: 375px;
+        position: absolute;
+        width: 100%; }
+      .write .project-container .write-project:hover .project-overlay {
+        display: block; }
 
 .make {
   background: #2c3e50; }
@@ -111,19 +159,19 @@ a {
     .am .me-photo-container:hover .me-photo-alt {
       display: inline-block; }
   .am .bio {
-    color: black;
+    color: grey;
     background-color: white;
     display: inline-block;
-    font-style: Lato, sans-serif;
+    font-family: Lato, sans-serif;
     float: left;
     height: 704px;
     margin-left: 5%;
-    padding: 20px;
+    padding: 30px;
     width: 467px; }
     .am .bio p {
-      font-size: 20px; }
-    .am .bio a {
-      color: black; }
+      font-size: 20px;
+      margin-bottom: 10px;
+      margin-top: 0; }
 
 /* ANIMATIONS
 ============================================================================= */

@@ -10,34 +10,53 @@ $background-color: #111;
   @include box-sizing(border-box);
 }
 
-body {
-    background: $background-color;
-    margin: 0;
-}
-
 a {
-    color: $primary-color; 
+    text-decoration: none;
     &:hover {
         color: grey;
     }
 }
 
+body {
+    background: $background-color;
+    height: 100%;
+    margin: 0;
+    position: absolute;
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding:0;
+}
+
 .nav-bar {
+    background-color: black;
     font: 30px/1.5 $description-font;
-    height: 5%;
+    height: 150px;
     width: 100%;
     z-index: 1;
 
     ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-
         li {
             display: inline;
             float: left;
             margin-left: 20px;
+            margin-top: 35px;
             width: 100px;
+
+            a {
+                color: grey;
+                &:hover {
+                    color: orange;
+                }
+            }
+        }
+
+        .gaoism-logo {
+            margin-top: 10px;
+            width: 280px;
         }
 
         .active {
@@ -48,13 +67,8 @@ a {
     }
 }
 
-.page {
-    color: $primary-color;
-    height: 100%;
-    width: 100%;
-}
-
 .page-title {
+    color: $primary-color;
     font-family: $description-font;
     font-size: 70px;
     margin-top: 0.5em;
@@ -72,7 +86,14 @@ a {
     color: $primary-color;
     position: absolute;
     width: 100%;
-    z-index: -1;
+    z-index: 1;
+    a {
+        color: $primary-color;
+        text-decoration: underline;
+        &:hover {
+            color: grey;
+        }
+    }
     .background-image {
         background-image: url('/img/brain.jpg');
         background-attachment: fixed;
@@ -111,14 +132,57 @@ a {
 
 .subpage {
     height: 100%;
-    overflow: auto;
-    padding-bottom: 50px;
+    position: relative;
     width: 100%;
 }
 
 .write {
     @extend .subpage;
     background: #2c3e50;
+    a,
+    a:visited {
+        color: grey;
+        &:hover {
+            color: orange;
+        }
+    }
+    .page-title {
+        height: 375px;
+        line-height: 375px;
+    }
+    .project-container {
+        text-align: center;
+        width: 100%;
+        .write-project {
+            color: white;
+            display: block;
+            height: 375px;
+            margin: auto auto;
+            position: relative;
+            width: 100%;
+            .project-overlay {
+                background-color: black;
+                display: none;
+                font-size: 50px;
+                height: 100%;
+                line-height: 375px;
+                opacity: 0.85;
+                position: absolute;
+                width: 100%;
+            }
+            .project-picture {
+                display: block;
+                height: 375px;
+                position: absolute;
+                width: 100%;
+            }
+            &:hover {
+                .project-overlay {
+                    display: block;
+                }
+            }
+        }
+    }
 }
 
 .make {
@@ -153,22 +217,20 @@ a {
     }
 
     .bio {
-        color: black;
+        color: grey;
         background-color: white;
         display: inline-block;
-        font-style: $description-font;
+        font-family: $description-font;
         float: left;
         height: 704px;
         margin-left: 5%;
-        padding: 20px;
+        padding: 30px;
         width: 467px;
 
         p {
             font-size: 20px;
-        }
-
-        a {
-            color: black;
+            margin-bottom: 10px;
+            margin-top: 0;
         }
     }
 }

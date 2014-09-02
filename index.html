@@ -7,6 +7,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular-route.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular-animate.js"></script>
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 
         <link href="css/style.css" rel="stylesheet">
         <script src="js/controllers.js"></script>
@@ -27,12 +28,12 @@
     <body>
       <div class="nav-bar" ng-show="showNavBar" ng-controller="NavbarController">
         <ul>
-          <li ng-class="{ active: isActive('/')}"><a href="/">Home</a></li>
+          <li class="gaoism-logo" ng-class="{ active: isActive('/')}"><a href="/"><img src="/img/gaoism-small.png" href="/"></a></li>
           <li ng-class="{ active: isActive('/write')}"><a href="#write">Write</a></li>
           <li ng-class="{ active: isActive('/make')}"><a href="#make">Make</a></li>
           <li ng-class="{ active: isActive('/am')}"><a href="#am">Am</a></li>
         </ul>
       </div>
-      <div ng-view class="page"></div>
+      <div ng-view class="{{ pageClass }}"></div>
     </body>
 </html>

@@ -34,26 +34,27 @@ homepageApp.config(function ($routeProvider) {
 
 homepageApp.controller('NavbarController', function ($scope, $location) {
     $scope.isActive = function (viewLocation) {
-        console.log("viewLocation", viewLocation);
-        console.log("path", $location.path());
         return viewLocation === $location.path();
     };
 });
 
 homepageApp.controller('HomeController', function ($scope) {
-    $scope.pageClass = 'page-home';
+    $scope.pageClass = 'home';
 });
 
 homepageApp.controller('WriteController', function ($scope) {
-    $scope.pageClass = 'page-write';
+    $scope.pageClass = 'write';
+    $scope.showWritingProject = function(project) {
+        console.log("showing project", project);
+    }
 });
 
 homepageApp.controller('MakeController', function ($scope) {
-    $scope.pageClass = 'page-make';
+    $scope.pageClass = 'make';
 });
 
 homepageApp.controller('AmController', function ($scope) {
-    $scope.pageClass = 'page-am'; 
+    $scope.pageClass = 'am';
 });
 
 homepageApp.run(['$rootScope', '$location', function ($rootScope, $location) {
