@@ -10,7 +10,7 @@ a {
     color: grey; }
 
 body {
-  background: #111111;
+  font-family: Lato, sans-serif;
   height: 100%;
   margin: 0;
   position: absolute;
@@ -24,38 +24,47 @@ ul {
 .nav-bar {
   background-color: black;
   font: 30px/1.5 Lato, sans-serif;
-  height: 150px;
+  height: 600px;
   width: 100%;
   z-index: 1; }
-  .nav-bar ul li {
-    display: inline;
-    float: left;
-    margin-left: 20px;
-    margin-top: 35px;
-    width: 100px; }
-    .nav-bar ul li a {
-      color: grey; }
-      .nav-bar ul li a:hover {
-        color: orange; }
-  .nav-bar ul .gaoism-logo {
-    margin-top: 10px;
-    width: 280px; }
-  .nav-bar ul .active a {
-    color: orange; }
-
-.page-title {
-  color: #eeeeee;
-  font-family: Lato, sans-serif;
-  font-size: 70px;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-  position: relative;
-  text-align: center; }
-  .page-title .title-emphasis {
-    font-family: Bitter, serif; }
+  .nav-bar ul {
+    height: 140px;
+    position: absolute;
+    right: 40px;
+    top: 270px;
+    width: 400px; }
+    .nav-bar ul li {
+      display: inline-block;
+      line-height: 100px;
+      margin-left: 30px;
+      vertical-align: middle; }
+      .nav-bar ul li a {
+        color: white;
+        display: inline; }
+        .nav-bar ul li a:hover {
+          color: orange; }
+    .nav-bar ul .gaoism-logo {
+      height: 100px;
+      margin-right: 10px;
+      width: 50px; }
+      .nav-bar ul .gaoism-logo img {
+        height: 100px;
+        width: 50px; }
+    .nav-bar ul .active a {
+      color: orange; }
+  .nav-bar .page-title {
+    color: white;
+    font-family: Lato, sans-serif;
+    font-size: 70px;
+    position: absolute;
+    left: 20px;
+    top: 270px; }
+    .nav-bar .page-title .title-emphasis {
+      font-family: Bitter, serif; }
 
 .home {
   top: 0;
+  background-color: black;
   bottom: 0;
   color: #eeeeee;
   position: absolute;
@@ -97,78 +106,95 @@ ul {
       top: 70%; }
 
 .subpage, .write, .make, .am {
-  height: 100%;
+  background-color: #EEE;
+  overflow: hidden;
+  padding-bottom: 50px;
+  padding-top: 30px;
   position: relative;
   width: 100%; }
 
-.write {
-  background: #2c3e50; }
-  .write a,
-  .write a:visited {
-    color: grey; }
-    .write a:hover,
-    .write a:visited:hover {
-      color: orange; }
-  .write .page-title {
-    height: 375px;
-    line-height: 375px; }
-  .write .project-container {
-    text-align: center;
+.write a,
+.write a:visited {
+  color: grey; }
+  .write a:hover,
+  .write a:visited:hover {
+    color: orange; }
+.write .page-title {
+  height: 375px;
+  line-height: 375px; }
+.write .write-container {
+  text-align: center;
+  width: 100%; }
+  .write .write-container .write-example {
+    color: black;
+    background-color: white;
+    margin: 5% 5%;
+    overflow: hidden;
+    position: relative;
     width: 100%; }
-    .write .project-container .write-project {
+    .write .write-container .write-example .write-title {
+      float: left;
+      font-size: 50px;
+      line-height: 375px;
+      padding: 0 10%;
+      text-decoration: none; }
+    .write .write-container .write-example .write-picture {
+      width: 50%; }
+    .write .write-container .write-example:hover {
       color: white;
-      display: block;
-      height: 375px;
-      margin: auto auto;
-      position: relative;
-      width: 100%; }
-      .write .project-container .write-project .project-overlay {
-        background-color: black;
-        display: none;
-        font-size: 50px;
-        height: 100%;
-        line-height: 375px;
-        opacity: 0.85;
-        position: absolute;
-        width: 100%; }
-      .write .project-container .write-project .project-picture {
-        display: block;
-        height: 375px;
-        position: absolute;
-        width: 100%; }
-      .write .project-container .write-project:hover .project-overlay {
-        display: block; }
+      background-color: black; }
 
-.make {
-  background: #2c3e50; }
-
-.am {
-  background: #2c3e50; }
-  .am .me-photo-container {
-    display: inline-block;
-    float: left;
-    height: 704px;
-    margin-left: 13%;
-    width: 467px; }
-    .am .me-photo-container .me-photo, .am .me-photo-container .me-photo-alt {
-      display: inline-block; }
-    .am .me-photo-container .me-photo-alt {
-      display: none; }
-    .am .me-photo-container:hover .me-photo, .am .me-photo-container:hover .me-photo-alt {
-      display: none; }
-    .am .me-photo-container:hover .me-photo-alt {
-      display: inline-block; }
-  .am .bio {
-    color: grey;
+.make .project-container {
+  text-align: center;
+  width: 100%; }
+  .make .project-container .project {
     background-color: white;
     display: inline-block;
-    font-family: Lato, sans-serif;
+    margin: 5% 5%;
+    overflow: hidden;
+    position: relative;
+    width: 40%; }
+    .make .project-container .project .project-picture {
+      border: 1px solid black;
+      border-style: none none solid none;
+      width: 100%; }
+    .make .project-container .project .project-title {
+      color: black;
+      font-size: 50px;
+      margin-top: 5%;
+      text-decoration: none; }
+    .make .project-container .project .project-description {
+      font-size: 15px;
+      padding: 5% 10%;
+      text-align: left; }
+
+.am .am-container {
+  margin: 0 auto;
+  overflow: hidden;
+  width: 60%; }
+  .am .am-container .me-photo-container {
     float: left;
     height: 704px;
-    margin-left: 5%;
+    width: 467px; }
+    .am .am-container .me-photo-container .me-photo, .am .am-container .me-photo-container .me-photo-alt {
+      display: inline-block; }
+      .am .am-container .me-photo-container .me-photo img, .am .am-container .me-photo-container .me-photo-alt img {
+        border-radius: 3px; }
+    .am .am-container .me-photo-container .me-photo-alt {
+      display: none; }
+    .am .am-container .me-photo-container:hover .me-photo, .am .am-container .me-photo-container:hover .me-photo-alt {
+      display: none; }
+    .am .am-container .me-photo-container:hover .me-photo-alt {
+      display: inline-block; }
+  .am .am-container .bio {
+    background-color: white;
+    border-radius: 3px;
+    float: right;
+    font-family: Lato, sans-serif;
+    height: 704px;
     padding: 30px;
     width: 467px; }
-    .am .bio p {
+    .am .am-container .bio p {
       font-size: 20px;
       margin-bottom: 10px;
       margin-top: 0; }

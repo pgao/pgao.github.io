@@ -26,7 +26,10 @@
     </head>
 
     <body>
-      <div class="nav-bar" ng-show="showNavBar" ng-controller="NavbarController">
+      <div class="nav-bar" ng-show="showNavBar" ng-style="getBackgroundImage()">
+        <span class="page-title">
+          I {{ pageClass }} <span class="title-emphasis">{{ pageEmphasis }}</span>.
+        </span>
         <ul>
           <li class="gaoism-logo" ng-class="{ active: isActive('/')}"><a href="/"><img src="/img/gaoism-small.png" href="/"></a></li>
           <li ng-class="{ active: isActive('/write')}"><a href="#write">Write</a></li>
