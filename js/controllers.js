@@ -27,7 +27,7 @@ homepageApp.config(function ($routeProvider) {
         .when('/write', {
             templateUrl: 'html/write.html',
             controller: 'WriteController',
-            navImage: '/img/heart.jpg',
+            navImage: '/img/scotland.jpg',
             pageClass: 'write',
             pageEmphasis: 'words',
             pageTitle: "I write. | GAOISM",
@@ -47,7 +47,7 @@ homepageApp.config(function ($routeProvider) {
         .when('/am', {
             templateUrl: 'html/am.html',
             controller: 'AmController',
-            navImage: '/img/seal.jpg',
+            navImage: '/img/heart.jpg',
             pageClass: 'am',
             pageEmphasis: 'Peter Gao',
             pageTitle: "I am. | GAOISM",
@@ -55,12 +55,6 @@ homepageApp.config(function ($routeProvider) {
         });
 
 });
-
-// homepageApp.controller('NavbarController', function ($scope, $location) {
-//     $scope.isActive = function (viewLocation) {
-//         return viewLocation === $location.path();
-//     };
-// });
 
 homepageApp.controller('HomeController', function ($scope) {
 
