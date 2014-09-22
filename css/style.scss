@@ -11,7 +11,9 @@ $default-border-radius: 3px;
   @include box-sizing(border-box);
 }
 
-a {
+a,
+a:visited {
+    color: blue;
     text-decoration: none;
     &:hover {
         color: grey;
@@ -39,55 +41,72 @@ ul {
     width: 100%;
     z-index: 1;
 
-    ul {
-        height: 140px;
-        position: absolute;
-        right: 40px;
-        top: 20%;
-        width: 400px;
-        li {
-            display: inline-block;
-            line-height: 100px;
-            margin-left: 30px;
-            vertical-align: middle;
+    .nav-options-container {
+        opacity: 1.0;
+        padding-top: 5%;
+        margin: 0 auto;
 
-            a {
-                color: white;
-                display: inline;
-                &:hover {
+        ul {
+            left: 40%;
+            position: absolute;
+            top: 21%;
+            li {
+                display: inline-block;
+                line-height: 100px;
+                margin-left: 30px;
+                vertical-align: middle;
+
+                a {
+                    color: white;
+                    display: inline;
+                    &:hover {
+                        color: orange;
+                    }
+                }
+            }
+
+            .active {
+                a {
                     color: orange;
                 }
             }
         }
 
         .gaoism-logo {
-            height: 100px;
-            margin-right: 10px;
-            width: 50px;
+            display: block;
+            margin: 0 auto;
+            width: 517px;
             img {
-                height: 100px;
-                width: 50px;
+                width: 517px;
             }
-        }
-
-
-        .active {
-            a {
-                color: orange;
+            .gaoism-transparent {
+                display: block;
+            }
+            .gaoism-opaque {
+                display: none;
+            }
+            &:hover {
+                .gaoism-transparent {
+                    display: none;
+                }
+                .gaoism-opaque {
+                    display: block;
+                }
             }
         }
     }
 
-    .page-title {
-        color: white;
-        font-family: $description-font;
-        font-size: 70px;
-        position: absolute;
-        left: 20px;
-        top: 20%;
-        .title-emphasis {
-            font-family: $emphasis-font;
-        }
+}
+
+.page-title {
+    color: black;
+    font-family: $description-font;
+    font-size: 70px;
+    line-height: 140px;
+    margin: 0 auto;
+    text-align: center;
+    .title-emphasis {
+        font-family: $emphasis-font;
     }
 }
 
@@ -157,12 +176,8 @@ ul {
     a:visited {
         color: grey;
         &:hover {
-            color: orange;
+            color: grey;
         }
-    }
-    .page-title {
-        height: 375px;
-        line-height: 375px;
     }
     .write-container {
         text-align: center;
@@ -170,10 +185,12 @@ ul {
         .write-example {
             color: black;
             background-color: white;
-            margin: 5% 5%;
+            border-radius: $default-border-radius;
+            display: block;
+            margin: 5% auto;
             overflow: hidden;
             position: relative;
-            width: 100%;
+            width: 90%;
             .write-title {
                 float: left;
                 font-size: 50px;
@@ -182,6 +199,12 @@ ul {
                 text-decoration: none;
             }
             .write-picture {
+                bottom: 0;
+                margin: auto;
+                padding: 50px;
+                position: absolute;
+                right: 100px;
+                top: 0;
                 width: 50%;
             }
             &:hover {
@@ -199,25 +222,28 @@ ul {
         width: 100%;
         .project {
             background-color: white;
+            border-radius: $default-border-radius;
             display: inline-block;
             margin: 5% 5%;
             overflow: hidden;
             position: relative;
             width: 40%;
             .project-picture {
-                border: 1px solid black;
-                border-style: none none solid none;
                 width: 100%;
             }
             .project-title {
                 color: black;
+                display: block;
                 font-size: 50px;
-                margin-top: 5%;
+                margin-top: 3%;
                 text-decoration: none;
+                &:hover {
+                    color: grey;
+                }
             }
             .project-description {
                 font-size: 15px;
-                padding: 5% 10%;
+                padding: 5% 5%;
                 text-align: left;
             }
         }
@@ -227,17 +253,17 @@ ul {
 .am {
     @extend .subpage;
     .am-container {
-        margin: 0 auto;
+        margin: 5% auto;
         overflow: hidden;
         width: 60%;
         .me-photo-container {
             float: left;
-            height: 704px;
-            width: 467px;
+            width: 50%;
             .me-photo {
-                display: inline-block;
+                display: block;
                 img {
                     border-radius: $default-border-radius;
+                    width: 100%;
                 }
             }
             .me-photo-alt {
@@ -249,7 +275,7 @@ ul {
                     display: none;
                 }
                 .me-photo-alt {
-                    display: inline-block;
+                    display: block;
                 }
             }
         }
@@ -258,9 +284,8 @@ ul {
             border-radius: $default-border-radius;
             float: right;
             font-family: $description-font;
-            height: 704px;
             padding: 30px;
-            width: 467px;
+            width: 50%;
 
             p {
                 font-size: 20px;

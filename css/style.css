@@ -4,9 +4,12 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-a {
+a,
+a:visited {
+  color: blue;
   text-decoration: none; }
-  a:hover {
+  a:hover,
+  a:visited:hover {
     color: grey; }
 
 body {
@@ -27,40 +30,50 @@ ul {
   height: 50%;
   width: 100%;
   z-index: 1; }
-  .nav-bar ul {
-    height: 140px;
-    position: absolute;
-    right: 40px;
-    top: 20%;
-    width: 400px; }
-    .nav-bar ul li {
-      display: inline-block;
-      line-height: 100px;
-      margin-left: 30px;
-      vertical-align: middle; }
-      .nav-bar ul li a {
-        color: white;
-        display: inline; }
-        .nav-bar ul li a:hover {
-          color: orange; }
-    .nav-bar ul .gaoism-logo {
-      height: 100px;
-      margin-right: 10px;
-      width: 50px; }
-      .nav-bar ul .gaoism-logo img {
-        height: 100px;
-        width: 50px; }
-    .nav-bar ul .active a {
-      color: orange; }
-  .nav-bar .page-title {
-    color: white;
-    font-family: Lato, sans-serif;
-    font-size: 70px;
-    position: absolute;
-    left: 20px;
-    top: 20%; }
-    .nav-bar .page-title .title-emphasis {
-      font-family: Bitter, serif; }
+  .nav-bar .nav-options-container {
+    opacity: 1.0;
+    padding-top: 5%;
+    margin: 0 auto; }
+    .nav-bar .nav-options-container ul {
+      left: 40%;
+      position: absolute;
+      top: 21%; }
+      .nav-bar .nav-options-container ul li {
+        display: inline-block;
+        line-height: 100px;
+        margin-left: 30px;
+        vertical-align: middle; }
+        .nav-bar .nav-options-container ul li a {
+          color: white;
+          display: inline; }
+          .nav-bar .nav-options-container ul li a:hover {
+            color: orange; }
+      .nav-bar .nav-options-container ul .active a {
+        color: orange; }
+    .nav-bar .nav-options-container .gaoism-logo {
+      display: block;
+      margin: 0 auto;
+      width: 517px; }
+      .nav-bar .nav-options-container .gaoism-logo img {
+        width: 517px; }
+      .nav-bar .nav-options-container .gaoism-logo .gaoism-transparent {
+        display: block; }
+      .nav-bar .nav-options-container .gaoism-logo .gaoism-opaque {
+        display: none; }
+      .nav-bar .nav-options-container .gaoism-logo:hover .gaoism-transparent {
+        display: none; }
+      .nav-bar .nav-options-container .gaoism-logo:hover .gaoism-opaque {
+        display: block; }
+
+.page-title {
+  color: black;
+  font-family: Lato, sans-serif;
+  font-size: 70px;
+  line-height: 140px;
+  margin: 0 auto;
+  text-align: center; }
+  .page-title .title-emphasis {
+    font-family: Bitter, serif; }
 
 .home {
   top: 0;
@@ -118,20 +131,19 @@ ul {
   color: grey; }
   .write a:hover,
   .write a:visited:hover {
-    color: orange; }
-.write .page-title {
-  height: 375px;
-  line-height: 375px; }
+    color: grey; }
 .write .write-container {
   text-align: center;
   width: 100%; }
   .write .write-container .write-example {
     color: black;
     background-color: white;
-    margin: 5% 5%;
+    border-radius: 3px;
+    display: block;
+    margin: 5% auto;
     overflow: hidden;
     position: relative;
-    width: 100%; }
+    width: 90%; }
     .write .write-container .write-example .write-title {
       float: left;
       font-size: 50px;
@@ -139,6 +151,12 @@ ul {
       padding: 0 10%;
       text-decoration: none; }
     .write .write-container .write-example .write-picture {
+      bottom: 0;
+      margin: auto;
+      padding: 50px;
+      position: absolute;
+      right: 100px;
+      top: 0;
       width: 50%; }
     .write .write-container .write-example:hover {
       color: white;
@@ -149,51 +167,52 @@ ul {
   width: 100%; }
   .make .project-container .project {
     background-color: white;
+    border-radius: 3px;
     display: inline-block;
     margin: 5% 5%;
     overflow: hidden;
     position: relative;
     width: 40%; }
     .make .project-container .project .project-picture {
-      border: 1px solid black;
-      border-style: none none solid none;
       width: 100%; }
     .make .project-container .project .project-title {
       color: black;
+      display: block;
       font-size: 50px;
-      margin-top: 5%;
+      margin-top: 3%;
       text-decoration: none; }
+      .make .project-container .project .project-title:hover {
+        color: grey; }
     .make .project-container .project .project-description {
       font-size: 15px;
-      padding: 5% 10%;
+      padding: 5% 5%;
       text-align: left; }
 
 .am .am-container {
-  margin: 0 auto;
+  margin: 5% auto;
   overflow: hidden;
   width: 60%; }
   .am .am-container .me-photo-container {
     float: left;
-    height: 704px;
-    width: 467px; }
+    width: 50%; }
     .am .am-container .me-photo-container .me-photo, .am .am-container .me-photo-container .me-photo-alt {
-      display: inline-block; }
+      display: block; }
       .am .am-container .me-photo-container .me-photo img, .am .am-container .me-photo-container .me-photo-alt img {
-        border-radius: 3px; }
+        border-radius: 3px;
+        width: 100%; }
     .am .am-container .me-photo-container .me-photo-alt {
       display: none; }
     .am .am-container .me-photo-container:hover .me-photo, .am .am-container .me-photo-container:hover .me-photo-alt {
       display: none; }
     .am .am-container .me-photo-container:hover .me-photo-alt {
-      display: inline-block; }
+      display: block; }
   .am .am-container .bio {
     background-color: white;
     border-radius: 3px;
     float: right;
     font-family: Lato, sans-serif;
-    height: 704px;
     padding: 30px;
-    width: 467px; }
+    width: 50%; }
     .am .am-container .bio p {
       font-size: 20px;
       margin-bottom: 10px;

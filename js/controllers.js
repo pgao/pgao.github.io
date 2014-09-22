@@ -37,7 +37,7 @@ homepageApp.config(function ($routeProvider) {
         .when('/make', {
             templateUrl: 'html/make.html',
             controller: 'MakeController',
-            navImage: '/img/lion.jpg',
+            navImage: '/img/pharad.jpg',
             pageClass: 'make',
             pageEmphasis: 'things',
             pageTitle: "I make. | GAOISM",
@@ -64,17 +64,17 @@ homepageApp.controller('WriteController', function ($scope) {
     $scope.writings = [
         {
             'name': 'Ramblings.',
-            'clickUrl': 'pgao.tumblr.com',
+            'clickUrl': 'http://pgao.tumblr.com',
             'imageUrl': '/img/write/gaoism-blog.png',
         },
         {
             'name': 'Satire.',
-            'clickUrl': 'haltingproblem.tumblr.com',
+            'clickUrl': 'http://haltingproblem.tumblr.com',
             'imageUrl': '/img/write/halting-problem.png'
         },
         {
             'name': 'Quotes.',
-            'clickUrl': 'instantgratification.herokuapp.com',
+            'clickUrl': 'http://instantgratification.herokuapp.com',
             'imageUrl': '/img/write/instagrat.png'
         },
     ];
@@ -86,7 +86,7 @@ homepageApp.controller('MakeController', function ($scope) {
             'name': 'Playalista',
             'clickUrl': 'https://github.com/pgao/playalista',
             'imageUrl': '/img/projects/playalista.png',
-            'description': '',
+            'description': 'A music jukebox backed by Youtube. All of my music library was stuck on one of my computers as a huge folder of MP3s, so I took my favourites, ripped out their names, and then used Youtube to play them, so I can listen to my music across all of my computers without having to download a bunch of files.',
         },
         {
             'name': 'Happy Meter',

@@ -1,8 +1,12 @@
-<a class="write-container" href="{{ writing.clickUrl }}" ng-repeat="writing in writings">
-    <div class="write-example">
+<div class="page-title">
+  I write <span class="title-emphasis">words</span>.
+</div>
+
+<div class="write-container">
+    <a class="write-example" href="{{ writing.clickUrl }}" ng-repeat="writing in writings" target="_blank">
         <div class="write-title">
             {{ writing.name }}
         </div>
-        <img class="write-picture" ng-src="{{ writing.imageUrl }}" target="_blank">
-    </div>
-</a>
+        <img class="write-picture" ng-src="{{ writing.imageUrl }}">
+    </a>
+</div>
