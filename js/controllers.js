@@ -63,19 +63,22 @@ homepageApp.controller('HomeController', function ($scope) {
 homepageApp.controller('WriteController', function ($scope) {
     $scope.writings = [
         {
-            'name': 'Ramblings.',
+            'name': 'Thoughts.',
             'clickUrl': 'http://pgao.tumblr.com',
             'imageUrl': '/img/write/gaoism-blog.png',
+            'description': 'Personal ramblings, both coherent and incoherent.'
         },
         {
             'name': 'Satire.',
             'clickUrl': 'http://haltingproblem.tumblr.com',
-            'imageUrl': '/img/write/halting-problem.png'
+            'imageUrl': '/img/write/halting-problem.png',
+            'description': 'If you look long enough into the absurdity, the absurdity begins to look back through you.'
         },
         {
             'name': 'Quotes.',
             'clickUrl': 'http://instantgratification.herokuapp.com',
-            'imageUrl': '/img/write/instagrat.png'
+            'imageUrl': '/img/write/instagrat.png',
+            'description': 'If... just one human being is inspired to say something nasty to a friend, or perhaps to strike a loved one, it will all have been worth the while.'
         },
     ];
 });
@@ -113,7 +116,7 @@ homepageApp.controller('MakeController', function ($scope) {
             'description': 'Angelhack Summer 2012.  Wearable technology.  Instead of looking at your phone for turn by turn directions, our bracelet lets you feel where you\'re supposed to go by vibrating on your wrist in the correct direction.',
         },
         {
-            'name': 'Intro to Hacking Workshop',
+            'name': 'Intro to Hacking',
             'clickUrl': 'http://blog.hackersatberkeley.com/?p=16',
             'imageUrl': '/img/projects/intro-hack.png',
             'description': 'I\'m one of the workshop officers for Hackers@Berkeley, and this is the first workshop we had in 2012.  We made a ghetto version of Instagram with filters that could be controlled via an Arduino ultrasound sensor.',
@@ -122,7 +125,7 @@ homepageApp.controller('MakeController', function ($scope) {
             'name': 'Robotics',
             'clickUrl': 'http://robotics.harker.org/',
             'imageUrl': 'http://farm8.staticflickr.com/7164/6828451651_3349fd719a_z.jpg',
-            'description': 'For four years, I built massive 120 lb semi-autonomous aluminium behemoths as part of my school\'s FRC robotics team. I learned a lot about mechanical, electrical, software, and people engineering in the most brutally intense way possible. The robot in the picture is named pharad. She features a custom-machined, tracked drive train capable of traversing extremely uneven terrain at high speed with no damage, utilising a pneumatically driven kicker to play the robot equivalent of soccer.'
+            'description': 'For four years, I built massive 120 lb semi-autonomous aluminium behemoths as part of my school\'s FRC robotics team. The robot in the picture is named pharad. She uses a tracked drive train and a pneumatically driven kicker to play the robot equivalent of soccer.'
         }
     ];
 });

@@ -2,12 +2,24 @@
   I make <span class="title-emphasis">things</span>.
 </div>
 
-<ul class="project-container">
-    <li class="project" ng-repeat="project in projects">
+<!-- <ul class="project-container">
+    <li class="project-example" ng-repeat="project in projects">
         <a href="{{ project.clickUrl }}" target="_blank">
             <img class="project-picture" ng-src="{{ project.imageUrl }}">
         </a>
         <a href="{{ project.clickUrl }}" class="project-title">{{ project.name }}</a>
         <div class="project-description">{{ project.description }}</div>
     </li>
-</ul>
+</ul> -->
+
+<div class="project-container">
+    <a class="project-example" href="{{ project.clickUrl }}" ng-repeat="project in projects" target="_blank">
+        <div class="project-title">
+            {{ project.name }}
+        </div>
+        <div class="project-description">
+            {{ project.description }}
+        </div>
+        <img class="project-picture" ng-src="{{ project.imageUrl }}">
+    </a>
+</div>

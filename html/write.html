@@ -2,11 +2,15 @@
   I write <span class="title-emphasis">words</span>.
 </div>
 
-<div class="write-container">
-    <a class="write-example" href="{{ writing.clickUrl }}" ng-repeat="writing in writings" target="_blank">
-        <div class="write-title">
+<div class="project-container">
+    <a class="project-example" href="{{ writing.clickUrl }}" ng-repeat="writing in writings" target="_blank">
+        <div class="project-title">
             {{ writing.name }}
         </div>
-        <img class="write-picture" ng-src="{{ writing.imageUrl }}">
+        <div class="project-description">
+            {{ writing.description }}
+        </div>
+        <img class="project-picture" ng-src="{{ writing.imageUrl }}">
     </a>
 </div>
+

@@ -7,6 +7,8 @@ $primary-color: #EEE;
 $background-color: #111;
 $default-border-radius: 3px;
 
+// --- COMMON STYLES ---
+
 *, *:after, *:before {
   @include box-sizing(border-box);
 }
@@ -95,7 +97,54 @@ ul {
             }
         }
     }
+}
 
+
+.project-container {
+    text-align: center;
+    width: 100%;
+    .project-example {
+        color: black;
+        background-color: white;
+        border-radius: $default-border-radius;
+        display: block;
+        height: 375px;
+        margin: 5% auto;
+        overflow: hidden;
+        position: relative;
+        width: 90%;
+        .project-description {
+            font-size: 20px;
+            left: 5%;
+            position: absolute;
+            text-align: left;
+            top: 40%;
+            width: 30%;
+        }
+        .project-picture {
+            bottom: 0;
+            margin: auto;
+            padding: 50px;
+            position: absolute;
+            right: 100px;
+            top: 0;
+            width: 50%;
+        }
+        .project-title {
+            color: black;
+            font-size: 50px;
+            left: 5%;
+            position: absolute;
+            top: 20%;
+        }
+        &:hover {
+            color: white;
+            background-color: black;
+            .project-title {
+                color: white;
+            }
+        }
+    }
 }
 
 .page-title {
@@ -109,6 +158,8 @@ ul {
         font-family: $emphasis-font;
     }
 }
+
+// --- PAGE SPECIFIC STYLES ---
 
 .home {
     top: 0;
@@ -172,82 +223,10 @@ ul {
 
 .write {
     @extend .subpage;
-    a,
-    a:visited {
-        color: grey;
-        &:hover {
-            color: grey;
-        }
-    }
-    .write-container {
-        text-align: center;
-        width: 100%;
-        .write-example {
-            color: black;
-            background-color: white;
-            border-radius: $default-border-radius;
-            display: block;
-            margin: 5% auto;
-            overflow: hidden;
-            position: relative;
-            width: 90%;
-            .write-title {
-                float: left;
-                font-size: 50px;
-                line-height: 375px;
-                padding: 0 10%;
-                text-decoration: none;
-            }
-            .write-picture {
-                bottom: 0;
-                margin: auto;
-                padding: 50px;
-                position: absolute;
-                right: 100px;
-                top: 0;
-                width: 50%;
-            }
-            &:hover {
-                color: white;
-                background-color: black;
-            }
-        }
-    }
 }
 
 .make {
     @extend .subpage;
-    .project-container {
-        text-align: center;
-        width: 100%;
-        .project {
-            background-color: white;
-            border-radius: $default-border-radius;
-            display: inline-block;
-            margin: 5% 5%;
-            overflow: hidden;
-            position: relative;
-            width: 40%;
-            .project-picture {
-                width: 100%;
-            }
-            .project-title {
-                color: black;
-                display: block;
-                font-size: 50px;
-                margin-top: 3%;
-                text-decoration: none;
-                &:hover {
-                    color: grey;
-                }
-            }
-            .project-description {
-                font-size: 15px;
-                padding: 5% 5%;
-                text-align: left;
-            }
-        }
-    }
 }
 
 .am {
@@ -255,10 +234,10 @@ ul {
     .am-container {
         margin: 5% auto;
         overflow: hidden;
-        width: 60%;
+        width: 70%;
         .me-photo-container {
             float: left;
-            width: 50%;
+            width: 49%;
             .me-photo {
                 display: block;
                 img {
@@ -284,12 +263,15 @@ ul {
             border-radius: $default-border-radius;
             float: right;
             font-family: $description-font;
+            // height
+            margin-bottom: -1000px;
             padding: 30px;
-            width: 50%;
+            padding-bottom: 1000px;
+            width: 49%;
 
             p {
-                font-size: 20px;
-                margin-bottom: 10px;
+                font-size: 25px;
+                margin-bottom: 20px;
                 margin-top: 0;
             }
         }
