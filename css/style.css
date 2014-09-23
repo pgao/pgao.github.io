@@ -24,6 +24,21 @@ ul {
   margin: 0;
   padding: 0; }
 
+.gaoism-logo {
+  display: block;
+  margin: 0 auto;
+  width: 517px; }
+  .gaoism-logo img {
+    width: 100%; }
+  .gaoism-logo .gaoism-transparent {
+    display: block; }
+  .gaoism-logo .gaoism-opaque {
+    display: none; }
+  .gaoism-logo:hover .gaoism-transparent {
+    display: none; }
+  .gaoism-logo:hover .gaoism-opaque {
+    display: block; }
+
 .nav-bar {
   background-color: black;
   font: 30px/1.5 Lato, sans-serif;
@@ -51,19 +66,7 @@ ul {
       .nav-bar .nav-options-container ul .active a {
         color: orange; }
     .nav-bar .nav-options-container .gaoism-logo {
-      display: block;
-      margin: 0 auto;
       width: 517px; }
-      .nav-bar .nav-options-container .gaoism-logo img {
-        width: 517px; }
-      .nav-bar .nav-options-container .gaoism-logo .gaoism-transparent {
-        display: block; }
-      .nav-bar .nav-options-container .gaoism-logo .gaoism-opaque {
-        display: none; }
-      .nav-bar .nav-options-container .gaoism-logo:hover .gaoism-transparent {
-        display: none; }
-      .nav-bar .nav-options-container .gaoism-logo:hover .gaoism-opaque {
-        display: block; }
 
 .project-container {
   text-align: center;
@@ -151,11 +154,8 @@ ul {
     right: 0;
     top: 30%;
     width: 647px; }
-    .home .home-content-container .gaoism {
-      position: absolute; }
-      .home .home-content-container .gaoism img {
-        display: block;
-        height: 250px; }
+    .home .home-content-container .gaoism-logo {
+      width: 647px; }
     .home .home-content-container .description {
       font-family: Lato, sans-serif;
       font-size: 50px;

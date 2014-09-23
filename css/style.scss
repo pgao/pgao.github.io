@@ -36,6 +36,29 @@ ul {
     padding:0;
 }
 
+.gaoism-logo {
+    display: block;
+    margin: 0 auto;
+    width: 517px;
+    img {
+        width: 100%;
+    }
+    .gaoism-transparent {
+        display: block;
+    }
+    .gaoism-opaque {
+        display: none;
+    }
+    &:hover {
+        .gaoism-transparent {
+            display: none;
+        }
+        .gaoism-opaque {
+            display: block;
+        }
+    }
+}
+
 .nav-bar {
     background-color: black;
     font: 30px/1.5 $description-font;
@@ -75,27 +98,9 @@ ul {
         }
 
         .gaoism-logo {
-            display: block;
-            margin: 0 auto;
             width: 517px;
-            img {
-                width: 517px;
-            }
-            .gaoism-transparent {
-                display: block;
-            }
-            .gaoism-opaque {
-                display: none;
-            }
-            &:hover {
-                .gaoism-transparent {
-                    display: none;
-                }
-                .gaoism-opaque {
-                    display: block;
-                }
-            }
         }
+
     }
 }
 
@@ -202,12 +207,8 @@ ul {
         right: 0;
         top: 30%;
         width: 647px;
-        .gaoism {
-            position: absolute;
-            img {
-                display: block;
-                height: 250px;
-            }
+        .gaoism-logo {
+            width: 647px;
         }
         .description {
             font-family: $description-font;
