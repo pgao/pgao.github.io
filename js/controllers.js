@@ -1,4 +1,4 @@
-var homepageApp = angular.module('homepageApp', ['ngRoute', 'ngAnimate']);
+var homepageApp = angular.module('homepageApp', ['ngRoute', 'ngAnimate', 'angular-flexslider']);
 
 homepageApp.run(function($rootScope, $location) {
     $rootScope.isActive = function(checkedPath) {
@@ -27,7 +27,7 @@ homepageApp.config(function ($routeProvider) {
         .when('/write', {
             templateUrl: 'html/write.html',
             controller: 'WriteController',
-            navImage: '/img/scotland.jpg',
+            navImage: '/img/nav/scotland.jpg',
             pageClass: 'write',
             pageEmphasis: 'words',
             pageTitle: "I write. | GAOISM",
@@ -37,7 +37,7 @@ homepageApp.config(function ($routeProvider) {
         .when('/make', {
             templateUrl: 'html/make.html',
             controller: 'MakeController',
-            navImage: '/img/pharad.jpg',
+            navImage: '/img/nav/pharad.jpg',
             pageClass: 'make',
             pageEmphasis: 'things',
             pageTitle: "I make. | GAOISM",
@@ -47,7 +47,7 @@ homepageApp.config(function ($routeProvider) {
         .when('/am', {
             templateUrl: 'html/am.html',
             controller: 'AmController',
-            navImage: '/img/heart.jpg',
+            navImage: '/img/nav/heart.jpg',
             pageClass: 'am',
             pageEmphasis: 'Peter Gao',
             pageTitle: "I am. | GAOISM",
@@ -57,7 +57,16 @@ homepageApp.config(function ($routeProvider) {
 });
 
 homepageApp.controller('HomeController', function ($scope) {
-
+    $scope.backgroundImages = [
+        '/img/home/brain.jpg',
+        '/img/home/torch.jpg',
+        '/img/home/pollock.jpg',
+        '/img/home/fountain.jpg',
+        '/img/home/flipturn.jpg',
+        '/img/home/lion.jpg',
+        '/img/home/seal.jpg',
+        '/img/home/buttons.jpg',
+    ]
 });
 
 homepageApp.controller('WriteController', function ($scope) {

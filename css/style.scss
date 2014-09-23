@@ -177,14 +177,22 @@ ul {
         }
     }
     .background-image {
-        background-image: url('/img/brain.jpg');
-        background-attachment: fixed;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: 100%;
         height: 100%;
-        opacity: 0.85;
+        overflow: hidden;
         width: 100%;
+        .flexslider {
+            background-color: black;
+            border: none;
+            height: 100%;
+            opacity: 0.95;
+            overflow: hidden;
+            width: 100%;
+            ul {
+                margin-top: -30%;
+                position: absolute;
+                top: 50%;
+            }
+        }
     }
     .home-content-container {
         height: 250px;
