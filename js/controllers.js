@@ -103,7 +103,7 @@ homepageApp.controller('MakeController', function ($scope) {
         {
             'name': 'Happy Meter',
             'clickUrl': 'https://github.com/pgao/HappyMeter',
-            'imageUrl': 'http://farm3.staticflickr.com/2853/9333223986_040f78e0ed_o.jpg',
+            'imageUrl': '/img/projects/happymeter.jpg',
             'description': 'What is happiness?  According to Sri, it is a bank account stuffed with cash and the adulation of your peers.  This tool tells you the price of a stock of your choice and correlates it to how Twitter is feeling about that stock at any point in time.',
         },
         {
@@ -115,13 +115,13 @@ homepageApp.controller('MakeController', function ($scope) {
         {
             'name': 'Instant Gratification',
             'clickUrl': 'https://github.com/pgao/Instant-Gratification',
-            'imageUrl': 'http://farm4.staticflickr.com/3697/9330429143_1fef06d3f5_o.jpg',
+            'imageUrl': '/img/projects/instagrat.jpg',
             'description': 'Facebook Battle of the Bay Hackathon 2012.  The best way to amuse yourself publicly without the police getting called on you.  The next step in efficient time wasting technology.',
         },
         {
             'name': 'Hapwear',
             'clickUrl': 'https://github.com/pgao/HapWear',
-            'imageUrl': 'http://i.imgur.com/SiJ20.jpg',
+            'imageUrl': '/img/projects/hapwear.jpg',
             'description': 'Angelhack Summer 2012.  Wearable technology.  Instead of looking at your phone for turn by turn directions, our bracelet lets you feel where you\'re supposed to go by vibrating on your wrist in the correct direction.',
         },
         {
@@ -133,7 +133,7 @@ homepageApp.controller('MakeController', function ($scope) {
         {
             'name': 'Robotics',
             'clickUrl': 'http://robotics.harker.org/',
-            'imageUrl': 'http://farm8.staticflickr.com/7164/6828451651_3349fd719a_z.jpg',
+            'imageUrl': '/img/projects/pharad.jpg',
             'description': 'For four years, I built massive 120 lb semi-autonomous aluminium behemoths as part of my school\'s FRC robotics team. The robot in the picture is named pharad. She uses a tracked drive train and a pneumatically driven kicker to play the robot equivalent of soccer.'
         }
     ];
