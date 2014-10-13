@@ -12,7 +12,7 @@ homepageApp.run(function($rootScope, $location) {
     }
 });
 
-homepageApp.config(function ($routeProvider) {
+homepageApp.config(function ($routeProvider, $locationProvider) {
     $routeProvider
         .when('/', {
             templateUrl: 'html/home.html',
@@ -53,7 +53,7 @@ homepageApp.config(function ($routeProvider) {
             pageTitle: "I am. | GAOISM",
             showNavBar: true
         });
-
+    $locationProvider.html5Mode(true);
 });
 
 homepageApp.controller('HomeController', function ($scope) {
